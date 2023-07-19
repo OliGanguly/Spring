@@ -9,6 +9,13 @@ public class Student {
     public int id=12;
 
     @Autowired
+//    constructor level
+    public Student(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    // Field level Autowired
+//    @Autowired
     public Teacher teacher;
 
     public String getName() {
@@ -19,6 +26,7 @@ public class Student {
         return teacher;
     }
 
+//    @Autowired on setter method
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
